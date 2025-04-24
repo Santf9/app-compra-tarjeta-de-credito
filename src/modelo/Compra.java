@@ -1,6 +1,6 @@
 package modelo;
 
-public class Compra {
+public class Compra implements Comparable<Compra> {
     private String descripcion;
     private double valor;
 
@@ -19,6 +19,13 @@ public class Compra {
 
     @Override
     public String toString() {
-        return "modelo.Compra: valor= " + valor + ", descripcion= " + descripcion;
+        return "Compra: valor= " + valor + ", descripcion= " + descripcion;
+    }
+
+    @Override
+    public int compareTo(Compra otraCompra) {
+        // Clase Double (Wrapper) al double primitivo para poder comparar los valores de Compra
+        // Casting de double a Double
+        return Double.valueOf(this.valor).compareTo(Double.valueOf(otraCompra.getValor()));
     }
 }
