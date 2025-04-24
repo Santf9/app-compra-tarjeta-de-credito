@@ -1,3 +1,5 @@
+package modelo;
+
 public class Compra {
     private String descripcion;
     private double valor;
@@ -17,6 +19,6 @@ public class Compra {
 
     @Override
     public String toString() {
-        return "Compra: valor= " + valor + ", descripcion= " + descripcion;
+        return "modelo.Compra: valor= " + valor + ", descripcion= " + descripcion;
     }
 }
